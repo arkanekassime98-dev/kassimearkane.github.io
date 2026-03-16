@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Kassime Arkane | Maintenance Industrielle & Création Visuelle Safi</title>
+  <meta name="description" content="Portfolio de Kassime Arkane, expert en Maintenance Industrielle et Créateur Visuel à Safi, Maroc.">
+  <meta name="keywords" content="Kassime Arkane, Maintenance Industrielle, ESTS Safi, SRM Safi, TIA Portal, Photographe Safi">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --red: #cc1d1d;
+      --bg: #0a0a0a;
+      --bg2: #111111;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8e8e8;
+      --muted: #666;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; cursor: none; overflow-x: hidden; }
+
+    /* Curseur personnalisé */
+    .cursor { position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none; }
+    .cursor-dot { position: absolute; width: 6px; height: 6px; background: var(--red); border-radius: 50%; transform: translate(-50%, -50%); }
+    .cursor-ring { position: absolute; width: 32px; height: 32px; border: 1px solid var(--red); border-radius: 50%; transform: translate(-50%, -50%); opacity: 0.5; transition: width 0.3s, height 0.3s; }
+
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; padding: 24px 60px; transition: 0.4s; }
+    nav.scrolled { background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #fff; text-decoration: none; letter-spacing: 2px; }
+    .nav-logo span { color: var(--red); }
+
+    /* Hero Section */
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 0 60px; position: relative; }
+    .hero-content { z-index: 2; }
+    .hero-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 10vw, 150px); line-height: 0.9; color: #fff; }
+    .hero-name span { -webkit-text-stroke: 1.5px #fff; color: transparent; }
+    .hero-sub { max-width: 500px; color: var(--muted); margin-top: 20px; font-size: 18px; }
+    .hero-sub strong { color: #fff; }
+
+    /* Portfolio Grid */
+    section { padding: 100px 60px; }
+    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 60px; margin-bottom: 40px; }
+    .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .portfolio-card { position: relative; overflow: hidden; background: var(--bg2); aspect-ratio: 4/5; }
+    .portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; filter: grayscale(100%); }
+    .portfolio-card:hover img { transform: scale(1.05); filter: grayscale(0%); }
+    .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 30px; }
+    .portfolio-tag { color: var(--red); font-family: 'Space Mono', monospace; font-size: 12px; text-transform: uppercase; }
+
+    /* Footer */
+    footer { padding: 40px 60px; border-top: 1px solid var(--border); text-align: center; font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); }
+
+    @media (max-width: 768px) {
+      nav, section, #hero { padding: 20px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      body { cursor: auto; } .cursor { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor">
+    <div class="cursor-ring" id="ring"></div>
+    <div class="cursor-dot" id="dot"></div>
+  </div>
+
+  <nav id="nav">
+    <a href="#" class="nav-logo">KASSIME <span>ARKANE.</span></a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-content">
+      <p style="color: var(--red); font-family: 'Space Mono'; letter-spacing: 4px;">PORTFOLIO 2026</p>
+      <h1 class="hero-name">KASSIME<br><span>ARKANE</span></h1>
+      <p class="hero-sub">
+        <strong>Technicien de Maintenance Industrielle</strong> à l'ESTS Safi & 
+        <strong>Créateur Visuel</strong>. Expert en automatisme (TIA Portal) et design graphique.
+      </p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title">PROJETS</h2>
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+        <img src="1000561421.jpg" alt="Kassime Arkane - Maintenance Industrielle TIA Portal Safi">
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Technique / Automatisme</span>
+          <h3>MAINTENANCE INDUSTRIELLE</h3>
+        </div>
+      </article>
+      <article class="portfolio-card">
+        <img src="1000490807.jpg" alt="Kassime Arkane - Design Graphique et Photographie Safi">
+        <div class="portfolio-overlay">
+          <span class="portfolio-tag">Création / Visuel</span>
+          <h3>DIRECTION ARTISTIQUE</h3>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>CONTACT : <a href="mailto:kassimearkane@gmail.com" style="color: var(--red); text-decoration: none;">kassimearkane@gmail.com</a></p>
+    <p style="margin-top: 10px;">© 2026 KASSIME ARKANE — SAFI, MAROC</p>
+  </footer>
+
+  <script>
+    const ring = document.getElementById('ring');
+    const dot = document.getElementById('dot');
+    window.addEventListener('mousemove', (e) => {
+      dot.style.left = ring.style.left = e.clientX + 'px';
+      dot.style.top = ring.style.top = e.clientY + 'px';
+    });
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
